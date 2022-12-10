@@ -11,7 +11,7 @@
   <form method="post">
     <h1>Bienvenidos a Angular {{title}}</h1>
     <label for="name">nombre</label>
-    <input type="text" className="form-control" name="nombre" [(ngModel)]="name"  id="nombre" placeholder="nombre">
+    <input type="text" className="form-control"  name="nombre" [(ngModel)]="name"  id="nombre" placeholder="nombre">
     <br>
     <label for="apellidos">Apellidos</label>
     <input type="text" name="apellidos" id="apellidos" [(ngModel)]="lastname" placeholder="Apellidos">
@@ -26,10 +26,12 @@
     <tr>
       <th>Nombres</th>
       <th>apellidos</th>
+      <th>Eliminar</th>
     </tr>
       <tr *ngFor="let objeto of datos">
         <td>{{objeto.name}}</td>
         <td>{{objeto.lastname}}</td>
+        <td><input type="button" className="btn btn-danger" value="Eliminar" (click)="Eliminar(objeto.id)"></td>
       </tr>
   </table>
 </body>
