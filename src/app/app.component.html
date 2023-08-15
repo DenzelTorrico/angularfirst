@@ -9,16 +9,20 @@
 <body>
  
   <form method="post">
-    <h1>Bienvenidos a Angular {{title}}</h1>
-    <label for="name">nombre</label>
-    <input type="text" className="form-control"  name="nombre" [(ngModel)]="name"  id="nombre" placeholder="nombre">
-    <br>
+    
+  
+      <h1>Bienvenidos a Angular {{title}}</h1>
+      <div id="name">
+      <label for="name">Nombres</label>
+      <input type="text" className="form-control"  name="nombre" [(ngModel)]="name"  id="nombre" placeholder="nombre">
+    </div>
+   
+   <div>
     <label for="apellidos">Apellidos</label>
     <input type="text" name="apellidos" id="apellidos" [(ngModel)]="lastname" placeholder="Apellidos">
-    <br>
  
-    <input type="button" value="Enviar" (click)="agregar(name,lastname)">
-    <input type="checkbox" name="check" id="check" >
+    <input type="button" value="Enviar" class="btn btn-primary" (click)="agregar(name,lastname)">
+   </div>
   </form>
  
   <table class="table table-striped table-bordered w-50 mx-auto">

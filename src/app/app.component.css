@@ -2,3 +2,8 @@ form{
     margin: 40px auto ;
     width: 300px;
 }
+
+#name{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

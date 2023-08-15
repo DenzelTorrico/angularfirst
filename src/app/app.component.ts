@@ -19,9 +19,14 @@ export class AppComponent {
 
   agregar(name:string,lastname:string) {
     this.id+=1
-    this.datos.push({id:this.id,name:name,lastname:lastname})
-    this.name = ""
-    this.lastname = ""
+    if(name == "" || lastname == ""){
+        alert("Rellena los datos por favor")
+    }else{
+      this.datos.push({id:this.id,name:name,lastname:lastname})
+      this.name = ""
+      this.lastname = ""
+    }
+    
   }
   Eliminar(id:number){
     this.datos = this.datos.filter(function(d){return d.id !==id})
