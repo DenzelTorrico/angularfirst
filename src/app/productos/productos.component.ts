@@ -8,14 +8,16 @@ import { HttpClient} from '@angular/common/http';
 })
 export class ProductosComponent implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+   }
+   protected data:any = []
 
   ngOnInit(): void {
     this.LoadProductos()
   }
   LoadProductos(){
     let productos = this.http.get("http://localhost:8081/angular/angularfirst/src/api/index.php").forEach(response => {
-      console.log(response)
+      this.data = response
   })
   }
 

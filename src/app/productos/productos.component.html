@@ -1,1 +1,18 @@
-<p>productos works!</p>
+<table class="container table table-dashed mt-2">
+    <thead class="thead bg-dark text-white">
+        <tr>
+        <th>id</th>
+        <th>nombre</th>
+        <th>descripcion</th>
+        <th>precio</th>
+        <th>Imagen</th>
+    </tr>
+</thead>
+    <tr *ngFor="let datos of data">
+            <td>{{datos.id}}</td>
+            <td>{{datos.nombre}}</td>
+            <td>{{datos.descripcion}}</td>
+            <td>{{datos.precio}}</td>
+            <td><img style="width: 150px;" src="{{datos.foto}}" alt=""></td>
+    </tr>
+</table>
