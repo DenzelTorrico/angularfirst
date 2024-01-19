@@ -16,7 +16,7 @@ export class ProductosComponent implements OnInit {
     this.LoadProductos()
   }
   LoadProductos(){
-    let productos = this.http.get("http://localhost/angularfirst/src/api/index.php").forEach(response => {
+    let productos = this.http.get("http://3.129.20.75/angularfirst/src/api/index.php").forEach(response => {
       this.data = response
   })
   }
